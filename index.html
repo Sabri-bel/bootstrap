@@ -9,21 +9,40 @@
 
 </head>
 <body>
-    
-     <article class="container">
+        <nav class="navbar navbar-light navbar-expand-sm bg-light">
+            <!--add the navbar for accessibiity reason-->
+            <a href="/" class="navbar-brand">Whiskey Drop</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="active nav-item mr-2"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="">About</a></li>
+                <li class="nav-item mr-2 d-block d-sm-none"><a class="nav-link" href="">Sign In / Sign Up</a></li>
+            </ul>
+
+            <div class="d-none d-md-block">
+                <!--appear only in the bigger screen-->
+                <p class="navbar-text my-auto mr-2"><i>Great whiskey delivered to your door</i></p>
+                <a href="/login">Sign In / Sign Up</a>
+            </div>
+
+        </nav>
+        <article class="container mt-3">
         <!--container class is used for the column layout - this is a bootstrap class
+        mt-3 is for spacing
         all the section below are included in article - semantic reason-->
         <div class="row">
             <!--row followed by class col-x is required for the row layout-->
             <div class="col-12">
                 <!--col 12 above means row will occupy the whole space-->
-                <section class="callout"></section>
-                <!--classes here are not bootstraps but personalized classes-->
+                <section class="callout jumbotron text-center">
+                <!--jumbotron is for the section standout-->
                 <!--callout section is important since it is the first things the user see when navigating in the page
                 it will contain the subscribe button called "call to action" and it is the main action of the website-->
                     <h1>The finest whiskeys delivered to your doorstep.</h1>
                     <!--the h1 above heavily influence the search in google. this is very important for visibility-->
-                    <p>Sign up today to start receiving the world's best whiskeys every month. <s>$ 19.99</s> <strong><mark>First one is free!</mark></strong></p>
+                    <p>Sign up today to start receiving the world's best whiskeys every month. <s class="d-none d-sm-inline">$ 19.99</s>
+                        <span class="d-inline d-sm-none"><br></span>
+                        <!--classses above are for remove the 19.99 in the smaller screen-->
+                        <strong><mark>First one is free!</mark></strong></p>
                     <button class="btn btn-lg btn-success">Sign Up!</button>
                     <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
                     <!--text-muted = bootstrap class-->
@@ -37,7 +56,7 @@
            <section class="quotes">
             <div class="row">
                 <!--title is considered a single row for layout-->
-                <div class="col-12">
+                <div class="col-12 my-5">
                     <h2 class="text-uppercase">Quotes:</h2>
                 </div>
             </div>
@@ -65,7 +84,7 @@
         <!-- Features used the lorem ipsum for testing-->
         <section class="features">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 my-5">
                     <h2 class="text-uppercase">Features:</h2>
                 </div>
             </div>
