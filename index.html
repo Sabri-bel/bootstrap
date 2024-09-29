@@ -11,54 +11,89 @@
 <body>
     
      <article class="container">
-        <!--container class will create a single column at the center of the page - this is a bootstrap class
+        <!--container class is used for the column layout - this is a bootstrap class
         all the section below are included in article - semantic reason-->
-        <section class="callout"></section>
-        <!--classes here are not bootstraps but personalized classes-->
-        <!--callout section is important since it is the first things the user see when navigating in the page
-        it will contain the subscribe button called "call to action" and it is the main action of the website-->
-            <h1>The finest whiskeys delivered to your doorstep.</h1>
-            <!--the h1 above heavily influence the search in google. this is very important for visibility-->
-            <p>Sign up today to start receiving the world's best whiskeys every month. <s>$ 19.99</s> <strong><mark>First one is free!</mark></strong></p>
-            <button class="btn btn-lg btn-success">Sign Up!</button>
-            <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
-            <!--text-muted = bootstrap class-->
-        </section>
+        <div class="row">
+            <!--row followed by class col-x is required for the row layout-->
+            <div class="col-12">
+                <!--col 12 above means row will occupy the whole space-->
+                <section class="callout"></section>
+                <!--classes here are not bootstraps but personalized classes-->
+                <!--callout section is important since it is the first things the user see when navigating in the page
+                it will contain the subscribe button called "call to action" and it is the main action of the website-->
+                    <h1>The finest whiskeys delivered to your doorstep.</h1>
+                    <!--the h1 above heavily influence the search in google. this is very important for visibility-->
+                    <p>Sign up today to start receiving the world's best whiskeys every month. <s>$ 19.99</s> <strong><mark>First one is free!</mark></strong></p>
+                    <button class="btn btn-lg btn-success">Sign Up!</button>
+                    <p class="text-muted"><small>You must be over 18 to sign up to our service. Please drink responsibly.</small></p>
+                    <!--text-muted = bootstrap class-->
+                </section>
+            </div>
+        </div>
      
     <!-- section 2 quotes - comments from customer -->
 
            <!-- Quotes -->
            <section class="quotes">
-            <h2 class="text-uppercase">Quotes:</h2>
-            <blockquote class="blockquote">
-                <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
-                <p>- Jane Doe</p>
-            </blockquote>
-            <blockquote class="blockquote">
-                <p>I haven't been sober for months!</p>
-                <p>- Jane Doe</p>
-            </blockquote>
+            <div class="row">
+                <!--title is considered a single row for layout-->
+                <div class="col-12">
+                    <h2 class="text-uppercase">Quotes:</h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!--this row will be divided based on screen size-->
+                <div class="col-12 col-md-6">
+                    <!--col-x layout is from small dispaly to larger display (col-12 -small screen, col 6 - larger screen)-->
+                    <blockquote class="blockquote">
+                        <p>I've been introduced to more than 10 great international whiskeys I never knew about.</p>
+                        <p>- Jane Doe</p>
+                    </blockquote>
+                </div>
+                <div class="col-12 col-md-6">
+                    <blockquote class="blockquote">
+                        <p>I haven't been sober for months!</p>
+                        <p>- Jane Doe</p>
+                    </blockquote>
+                </div>
+            </div>
         </section>
         <!-- /.quotes -->
         <hr>
 
         <!-- Features used the lorem ipsum for testing-->
         <section class="features">
-            <h2 class="text-uppercase">Features:</h2>
-            <div class="feature">
-                <h3>Feature 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-uppercase">Features:</h2>
+                </div>
             </div>
-            <div class="feature">
-                <h3>Feature 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
-            </div>
-            <div class="feature">
-                <h3>Feature 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3>Feature 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
+            
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="feature">
+                        <h3>Feature 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
+            
+                <div class="col-12 d-md-none d-lg-block col-lg-4">
+                    <div class="feature">
+                        <h3>Feature 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a class="btn btn-sm btn-light" href="">Read More</a></p>
+                    </div>
+                </div>
             </div>
         </section>
         
